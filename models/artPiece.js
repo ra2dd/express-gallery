@@ -18,4 +18,4 @@ ArtPieceSchema.virtual("url").get(function () {
 });
 
 // Export Model
-module.exports = mongoose.model("ArtPiece", "ArtPieceSchema")
+module.exports = mongoose.model("ArtPiece", ArtPieceSchema)

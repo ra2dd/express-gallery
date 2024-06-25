@@ -1,0 +1,10 @@
+extends layout 
+
+block content
+  h1= title 
+  if artpiece_list.length 
+    ul 
+      each artpiece in artpiece_list 
+        li 
+          p #{artpiece.title}
+          p #{artpiece}
