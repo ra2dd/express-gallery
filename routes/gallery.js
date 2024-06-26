@@ -37,11 +37,18 @@ router.get("/artist/:id", artist_controller.artist_detail);
 
 // ART TYPE ROUTES //
 
+// Get request for creating an art type. 
+// This must come before route that displays Art Type (uses id).
+router.get("/type/create", arttype_controller.arttype_create_get);
+
+// Post request for creating art type
+router.post("/type/create", arttype_controller.arttype_create_post);
+
 // Get art type list
-router.get("/type", artist_controller.artist_list);
+router.get("/type", arttype_controller.arttype_list);
 
 // Get request for one art type
-router.get("/type/:id", artist_controller.artist_detail);
+router.get("/type/:id", arttype_controller.arttype_detail);
 
 
 module.exports = router
