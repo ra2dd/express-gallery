@@ -11,12 +11,14 @@ exports.artpiece_list = asyncHandler(async (req, res, next) => {
     .sort({ title: 1})
     .exec();
 
-  res.render(
-    "artpiece_list", 
-    { 
-      title: "Art Piece List",
-      artpiece_list: allArtPieces,
-    });
+  // res.render(
+  //   "artpiece_list", 
+  //   { 
+  //     title: "Art Piece List",
+  //     artpiece_list: allArtPieces,
+  //   });
+
+  res.json(allArtPieces);
 });
 
 // Display detail page for a specific Art Piece
