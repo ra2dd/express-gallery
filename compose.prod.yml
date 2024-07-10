@@ -1,0 +1,16 @@
+services:
+  web:
+    depends_on:
+      - api
+    image: ${DOCKER_USERNAME}/express-gallery-web:latest
+    container_name: express-gallery-web-ctn
+    ports:
+      - 80:80
+    
+  api:
+    image: ${DOCKER_USERNAME}/express-gallery-api:latest
+    container_name: express-gallery-api-ctn
+    ports:
+      - 8000:8000
+    environment:
+      - MONGODB_URI=${MONGODB_URI}

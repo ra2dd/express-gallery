@@ -1,8 +1,13 @@
 import { useState, useEffect } from  'react'
 
+interface ArtPiece {
+  _id: string,
+  title: string,
+  artist: string,
+}
+
 function Art() {
-  // TODO asign type interface and check it when fetching
-  const [artData, setArtData] = useState([]);
+  const [artData, setArtData] = useState<ArtPiece[]>([]);
 
   useEffect(() => {
     fetch('api/art')
