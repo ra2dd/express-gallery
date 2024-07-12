@@ -1,5 +1,6 @@
 import './App.css'
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
+import Home from './components/Home'
 import Art from './components/Art'
 
 function App() {
@@ -8,13 +9,13 @@ function App() {
     <>
       <Router>
         <nav>
-          <ul>
+          <ul id='navLinks'>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/art">Art Pieces</Link></li>
           </ul>
         </nav>
         <Routes>
-          <Route path="/" element={<p>Home</p>} />
+          <Route path="/" element={< Home />} />
           <Route path="/art" element={<Art />} />
           <Route path="/category" element={<p>Categories</p>} />
           <Route path="*" element={<p>Not Found</p>} />

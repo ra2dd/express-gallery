@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+ul, li, a, a:hover, a:link, a:visited, a:active {
+  all: unset;
+}
+
+a:hover {
+  cursor: pointer;
+}
