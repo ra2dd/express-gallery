@@ -1,0 +1,34 @@
+.main-ctn {
+  padding: 2rem 1rem;
+}
+
+.art-ctn li {
+  flex: 1 1 40%;
+  padding-bottom: 5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.art-ctn li:first-of-type {
+  padding-top: 2rem;
+}
+
+.art-ctn li:last-of-type {
+  padding-bottom: 1rem;
+}
+
+.art-ctn h3 {
+  margin: 0.5rem 0;
+  font-weight: 400;
+  font-family: sans-serif;
+}
+
+.art-ctn img {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  border-radius: 0.5rem;
+}

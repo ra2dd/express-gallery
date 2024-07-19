@@ -1,9 +1,11 @@
 import { useState, useEffect } from  'react'
+import './Art.css'
 
 interface ArtPiece {
   _id: string,
   title: string,
   artist: string,
+  image: string,
 }
 
 function Art() {
@@ -23,13 +25,12 @@ function Art() {
 
   return (
     <>
-      <div>
-        <h2>ArtData</h2>
-        <ul>
+      <div className='main-ctn'>
+        <ul className='art-ctn'>
           {artData.map((art) => (
             <li key={art._id}>
+              <img src={art.image} alt={'Art Piece ' + art.title} />
               <h3>{art.title}</h3>
-              <p>{art.artist}</p>
             </li>
           ))}
         </ul>

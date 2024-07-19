@@ -7,7 +7,7 @@ const asyncHandler = require("express-async-handler");
 
 // Display list of all Art Pieces
 exports.artpiece_list = asyncHandler(async (req, res, next) => {
-  const allArtPieces = await ArtPiece.find({}, "title artist")
+  const allArtPieces = await ArtPiece.find({}, "title artist image")
     .sort({ title: 1})
     .exec();
 
